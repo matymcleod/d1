@@ -5,6 +5,7 @@ const whatToDoForLunch = function(hungry, availableTime) {
   const notHungry = 'You have some time but not hungry, take a quick stretch break and get back to it until you get hungry';
 
   if (hungry) {
+    // assumes hungry to be true, default is always true
     if (availableTime < 20) {
       return lessThan20;
     } else if ((availableTime >= 20) && (availableTime <= 30)) {
@@ -14,6 +15,7 @@ const whatToDoForLunch = function(hungry, availableTime) {
     }
   }
   return notHungry;
+  // if non of the above results to true, return variable notHungry
 };
 
 /*
@@ -21,7 +23,7 @@ const whatToDoForLunch = function(hungry, availableTime) {
  * defined above to verify we're making the right decisions. Do not modify it!
  */
 
-console.log("I'm hungry and have 20 mins. ", whatToDoForLunch(true, 20));
+console.log(`I'm hungry and have 20 mins. `, whatToDoForLunch(true, 20));
 console.log("---");
 
 console.log("I'm hungry and I have 50 minutes for lunch. ", whatToDoForLunch(true, 50));
